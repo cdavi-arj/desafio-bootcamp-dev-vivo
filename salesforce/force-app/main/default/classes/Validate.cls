@@ -1,7 +1,5 @@
-public with sharing class Validate {
-
+public class Validate {
   public static boolean isCNPJ(String CNPJ) {
-
     CNPJ = removeCaractEsp(CNPJ);
 
     if (!CNPJ.isNumeric())
@@ -51,7 +49,6 @@ public with sharing class Validate {
 
     // Verifica se os dígitos calculados conferem com os dígitos informados.
     if (dig13 == Integer.valueOf(cnpjString[12]) && dig14 == Integer.valueOf(cnpjString[13]))
-
       return true;
     else return false;
   }
@@ -130,5 +127,4 @@ public with sharing class Validate {
       .replace('(', '')
       .replace(')', '');
   }
-
 }
